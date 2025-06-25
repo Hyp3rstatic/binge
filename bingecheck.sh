@@ -1,7 +1,11 @@
 #!/bin/bash
 
+#add a link to the binge list
+
 if [[ $1 = 'add' ]]; then
   echo $2 >> $PROGRAMDIR/bashscripts/binge/bingelist
+
+#open all the links in the binge list
 
 else
   while IFS= read -r line; do
@@ -13,4 +17,3 @@ else
   done < $PROGRAMDIR/bashscripts/binge/bingelist
   
 fi
-
